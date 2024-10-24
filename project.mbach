@@ -1,0 +1,18 @@
+scene catScene = {
+
+    size = (1600,1255).
+    layers = { top }.
+
+    background = loadImage(Images/Background.png).
+    cat_up_img = loadImage(Images/cat_up.png).
+
+    widget cat_up = {
+       display = { cat_up_img }
+       init = { wdL = top. }
+    }
+
+}.
+
+proc Cat = tell(cat).
+     Init = draw_scene(catScene); place_at(cat_up, catScene, 200, 150); show(cat_up, catScene).
+     CatMain = Init.
